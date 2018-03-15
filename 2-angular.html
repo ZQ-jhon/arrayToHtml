@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script>
+	</head>
+	<body ng-app="app">
+		<select name="s1" id="s1" ng-controller='ctrl1' ng-options="selectedValue">
+			<option value="0">未选择</option>
+			<option value="1" selected="selected">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select>
+		
+		<select name="s2" id="s2" ng-controller='ctrl2'> 
+			<option value="0" selected="selected">未选择</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select>
+	 	
+	 	<select name="s3" id="s3" ng-controller='ctrl3'>
+	 		<option value="0" selected="selected">未选择</option>
+	 		<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+	 	</select>
+	 	
+	 	
+	 	<script type="text/javascript">
+	 		var app =angular.module('app',[]);
+	 		
+	 		app.controller('ctrl1',($scope)=>{
+	 			var selectedValue;
+	 			alert(selectedValue)
+	 		});
+	 	</script>
+	</body>
+</html>

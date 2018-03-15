@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			h1,pre,table{margin:0 auto;}
+			pre{text-align: left;}
+		</style>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	
+	<body>
+		
+		<select name="s1" id="s1">
+			<option value="0" selected="selected">未选择</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select>
+		
+		<select name="s2" id="s2">
+			<option value="0" selected="selected">未选择</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select>
+	 	
+	 	<select name="s3" id="s3">
+	 		<option value="0" selected="selected">未选择</option>
+	 		<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+	 	</select>
+	 
+<script type="text/javascript">
+
+
+
+
+
+$('#s1').change(()=>{
+	
+	
+	 var s1Val = $('#s1').val();
+	 
+
+
+	  $('#s2').find("option[value = '"+s1Val+"']").attr('disabled','disabled');
+	  $('#s3').find("option[value = '"+s1Val+"']").attr('disabled','disabled');
+
+
+});
+
+$('#s2').change(()=>{
+	
+	
+	var s2Val = $('#s2').val();
+	$('#s1').find("option[value = '"+s2Val+"']").attr('disabled','disabled');
+	$('#s3').find("option[value = '"+s2Val+"']").attr('disabled','disabled');
+
+});
+
+$('#s3').change(()=>{
+	
+	var s3Val = $('#s3').val();
+	$('#s1').find("option[value = '"+s3Val+"']").attr('disabled','disabled');
+	$('#s2').find("option[value = '"+s3Val+"']").attr('disabled','disabled');
+
+});
+	
+	
+
+	
+
+ 
+
+</script>
+		
+	</body>
+	
+</html>
